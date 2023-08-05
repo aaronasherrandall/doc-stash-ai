@@ -1,9 +1,5 @@
-import { Application } from "@hotwired/stimulus"
+import { application } from "./application"
 
-const application = Application.start()
 
-// Configure Stimulus development experience
-application.debug = false
-window.Stimulus   = application
-
-export { application }
+import HelloController from "./hello_controller"
+application.register("hello", HelloController)
